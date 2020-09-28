@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './App.css';
 import {generateEmptyGrid, simLogic, numRows, numColums} from './helpers'
-import { glider } from './presets'
+import { glider, spaceship } from './presets'
 import {GameOfLifeDescription} from './GameOfLifeDescription';
 
 
@@ -131,6 +131,14 @@ function App() {
           >
             Glider
           </button>
+		  <button
+            onClick={() => {
+              setBufferOne(spaceship);
+            }}
+          >
+            Spaceship
+          </button>
+
 		<h1 style={{fontSize:'1.5rem'}}>Generation {generation}</h1>
     <div style={{
       display: 'grid',
